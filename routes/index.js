@@ -1,5 +1,6 @@
-module.exports = app => {
-    const indexRoutes = require("./index.routes");
-    app.use("/api", indexRoutes);
-}
+const router = require('express').Router()
+
+router.use("/restaurants", require('./restaurant.routes'))
+
+module.exports = router
 
