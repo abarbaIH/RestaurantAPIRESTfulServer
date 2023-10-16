@@ -2,19 +2,22 @@ const { Schema, model } = require("mongoose");
 
 const restaurantSchema = new Schema(
     {
-        nombre: {
+        name: {
             type: String,
             required: [true, 'Por favor, añade el nombre del restaurante'],
             trim: true
         },
-        direccion: {
+        direction: {
             type: String,
-            required: [true, 'Por favor, añade la dirección del restaurante']
+            required: [true, 'Por favor, añade la dirección del restaurante'],
+            trim: true
         },
-        telefono: {
+        phone: {
             type: String,
             required: [true, 'Por favor, añade un número de teléfono'],
-            minlength: [9, "Introduce un teléfono correcto"]
+            minlength: [9, "Introduce un teléfono correcto"],
+            trim: true
+
         },
         imageUrl: {
             type: String,

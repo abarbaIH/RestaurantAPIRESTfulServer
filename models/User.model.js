@@ -12,6 +12,12 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: [true, 'Introduce una contraseña']
+    },
+    username: {
+      type: String,
+      required: [true, 'Introduce el nombre de usuario'],
+      trim: true,
+      minlength: [3, 'El nombre de usuario es demasiado corto']
     }
   },
   {
