@@ -5,7 +5,8 @@ const restaurantSchema = new Schema(
         name: {
             type: String,
             required: [true, 'Por favor, añade el nombre del restaurante'],
-            trim: true
+            trim: true,
+            unique: true
         },
         direction: {
             type: String,
